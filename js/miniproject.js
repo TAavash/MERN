@@ -1,20 +1,33 @@
-// 1. Promises
-function fetchData() {
+//1. P R O M I S E
+const fetchData = () => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      if (Math.random() > 0.2) {
-        // 80% chance to resolve
-        resolve([
-          { id: 1, name: "John Doe", age: 25 },
-          { id: 2, name: "Jane Doe", age: 30 },
-          { id: 3, name: "Alice Smith", age: 22 },
-        ]);
-      } else {
-        reject("Failed to fetch data");
-      }
+      fetch(
+        `https://api.themoviedb.org/3/movie/popular?api_key=2933cae520e958c54e974ed5617846c0`
+      )
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Network response was not ok");
+          }
+          return response.json();
+        })
+        .then((data) => {
+          resolve(data);
+        })
+        .catch((error) => {
+          reject(error);
+        });
     }, 2000);
   });
-}
+};
+
+fetchData()
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error("Error fetching data:", error);
+  });
 
 // 2. Closures
 function createCounter() {
@@ -24,31 +37,72 @@ function createCounter() {
     getCount: () => count,
   };
 }
+const counter = createCounter();
+console.log(counter.getCount());
+counter.increment();
+console.log(counter.getCount());
 
 // 3. Callbacks
-function processData(numbers, callback) {
-  return numbers.map(callback);
+function processData(arr, process) {
+  const processedArray = [];
+  for (let i = 0; i < arr.length; i++) {
+    processedArray.push(process(arr[i]));
+  }
+  return processedArray;
 }
 
-// 4. Async/Await
-async function fetchDataAsync() {
-  try {
-    const data = await fetchData();
-    return data;
-  } catch (error) {
-    console.error(error);
-  }
+function addOne(arr) {
+  return arr + 1;
 }
+
+const firstArray = [1, 2, 3, 4, 5];
+const secondArray = processData(firstArray, addOne);
+console.log(secondArray);
+// 4. Async/Await
+// const fetchData = async () => {
+//     try {
+
+//       await new Promise((resolve) => setTimeout(resolve, 2000));
+//       const response = await fetch(
+//         `https://api.themoviedb.org/3/movie/popular?api_key=2933cae520e958c54e974ed5617846c0`
+//       );
+
+//       if (!response.ok) {
+//         throw new Error("Network response was not ok");
+//       }
+
+//       const data = await response.json();
+//       return data;
+//     } catch (error) {
+//       throw error;
+//     }
+//   };
+
+//   const getData = async () => {
+//     try {
+//       const data = await fetchData();
+//       console.log(data);
+//     } catch (error) {
+//       console.error("Error fetching data:", error);
+//     }
+//   };
+
+//   getData();
+
+getData().then((msg) => console.log(msg));
 
 // 5. Array Manipulation: Map
-function doubleNumbers(numbers) {
-  return numbers.map((num) => num * 2);
-}
+
+const arrayOfNumber = [5, 7, 9, 10, 13];
+
+mapp = arrayOfNumber.map((num) => num + num);
+console.log(mapp);
 
 // 6. Array Manipulation: Filter
-function filterNumbers(numbers) {
-  return numbers.filter((num) => num >= 10);
-}
+const arrayOfNumbers = [5, 7, 30, 40, 50];
+
+filters = arrayOfNumbers.filter((num) => num > 10);
+console.log(filters);
 
 // 7. Array Manipulation: Find
 function findNumber(numbers) {
@@ -80,6 +134,9 @@ class Person {
   }
 }
 
+const personName = new Person("Ram", 20);
+console.log(personName.describe());
+
 // 11. Inheritance
 class Student extends Person {
   constructor(name, age, grade) {
@@ -91,6 +148,9 @@ class Student extends Person {
     return `${this.name} is studying.`;
   }
 }
+const students = new Student("Ravan", 20, "A");
+console.log(students.describe());
+console.log(students.study());
 
 // 12. Error Handling with Promises
 fetchData()
