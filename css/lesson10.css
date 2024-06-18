@@ -1,0 +1,34 @@
+a:hover{
+    color: green;
+}
+
+a:active{
+    color:black
+}
+
+a:link{
+    color:rgb(191, 255, 0)
+}
+
+#w3:visited{
+    color: chocolate;
+}
+#can:visited{
+    color: rgb(165, 210, 30);
+}
+#clss:visited{
+    color: chocolate;
+}
+p::first-letter{
+    font-size: 300px;
+    color: brown;
+}
+h1::before{
+    content:url("../assets/blue\ lock.jpg")
+}
+h1::after{
+    content: url("../assets/haikyu-movie.jpg");
+}
+a[target="aaa"]{
+    background-color: rgb(128, 128, 251);
+}

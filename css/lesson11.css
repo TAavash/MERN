@@ -1,0 +1,29 @@
+/* child sibling */
+.main_div>h1{ 
+    background-color: red;
+}
+/* adjacent sibling */
+h1+h2{
+    color: blue;
+}
+/* general sibling */
+h1~h2{
+    background-color: aqua;
+}
+
+.buttin{
+    border: 5px solid rgb(128, 0, 0);
+}
+
+.buttout{
+    
+    border: 5px;
+    border-style: solid;
+    border-color: rgb(31, 1, 255);
+    border-radius: 20px;
+}
+.bobobo{
+    height: 100%;
+    background-image: url("../assets/blue\ lock.jpg");
+    background-attachment: fixed;
+}

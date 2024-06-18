@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .ball-container {
+        width: screen;
+        height: 200px;
+        position: relative;
+        perspective: 100px; /* Adds 3D effect */
+      }
+
+      .ball {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: rotateBall 5s linear infinite; /* Animation properties */
+      }
+
+      @keyframes rotateBall {
+        from {
+          transform: translate(-50%, -50%) rotateY(0deg);
+          background-color: red;
+        }
+        to {
+          transform: translate(-50%, -50%) rotateY(360deg);
+          background-color: blue;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ball-container">
+      <div class="ball"></div>
+    </div>
+  </body>
+</html>

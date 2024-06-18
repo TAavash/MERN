@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      body {
+        background-color: #7fa2aaa0;
+      }
+      .form {
+        margin-left: 20%;
+        background: #fff;
+        height: 350px;
+        width: 300px;
+        justify-items: center;
+        padding: 50px;
+        border-radius: 2%;
+      }
+      input {
+        width: 100%;
+      }
+      .submit {
+        background: blue;
+        color: #fff;
+        width: 100%;
+        height: 30px;
+      }
+      #pass{
+        flex:content;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>JavaScript HTML Events</h2>
+    <p>Click the button to display the data.</p>
+    <button class="btn" onclick="displayDate()">The time is?</button>
+    <p id="demo"></p>
+    <script>
+      function displayDate() {
+        document.getElementById("demo").innerHTML = Date();
+        paragraphElement.style.color = "red";
+        paragraphElement.style.fontSize = "20px";
+      }
+      const buttonElement = document.getElementsByClassName("btn")[0];
+      buttonElement.addEventListener("click", function () {});
+    </script>
+
+    <div class="form">
+      <h1>Register</h1>
+      <p>Username</p>
+      <input type="text" />
+      <p>Email</p>
+      <input type="text" />
+      <p>Password</p>
+      <div id="pass"><input type="text" />
+      <i class="fa fa-eye"></i></div><br /><br />
+      <button class="submit">Submit</button>
+    </div>
+  </body>
+</html>

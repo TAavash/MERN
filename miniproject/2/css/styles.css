@@ -1,0 +1,100 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: #369091;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    flex: 1;
+}
+.hero-menu{
+    /* height: 50%;
+    width: screen; */
+}
+.hero {
+    height: 100%;
+    color: rgb(0, 255, 200);
+    font-size: x-large;
+    font-style: oblique;
+    background-image: url("../images/restaurant1.jpg");
+    background-attachment: fixed;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#des{
+    color: chartreuse;
+    font-weight: bold;
+  border: 3px solid #f1f1f1;
+  border-radius: 30px;
+  border-color: gold;
+  z-index: 2;
+}
+
+.special-features, .menu, .contact-info, .contact-form {
+    margin: 2rem;
+}
+
+.menu-item {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.menu-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.menu-item .price {
+    font-weight: bold;
+}
+
+footer {
+    background: #369091;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin-bottom: 1rem;
+    }
+    
+    .hero {
+        height: 40vh;
+    }
+}
