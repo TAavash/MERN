@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./styles.css" rel="stylesheet" />
+    <style>
+      .dark-mode {
+        --tw-bg-opacity: 1;
+        background-color: black;
+        --tw-text-opacity: 1;
+        color: white;
+        font-size: 25px;
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-800">
+    <div class="min-h-screen min-w-screen flex justify-evenly items-center">
+      <h1 class="mr-[50px]">Hello</h1>
+      <button
+        id="toggleTheme"
+        class="rounded p-[5px] bg-yellow-400 hover:bg-red-600 text-red-600 hover:text-yellow-400 hover:text-xl"
+      >
+        Toggle Dark Mode
+      </button>
+    </div>
+    <div class="w-[100px] h-[300px] bg-slate-700">
+<img src="" alt="">
+        <div>"Tailwing CSS is "</div>
+    </div>
+
+    <script>
+      const toggleThemeBtn = document.getElementById("toggleTheme");
+      toggleThemeBtn.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+      });
+    </script>
+  </body>
+</html>

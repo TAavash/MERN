@@ -8,22 +8,46 @@
 body {
     font-family: Arial, sans-serif;
 }
-
+#log{
+    background-color: red;
+    margin: 5px;
+}
+#sign{
+    background-color: blue;
+    margin: 5px;
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100px;
+    color: #fff;
+    padding: 0 20px;
+}
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 100px;
-    background: #17a01e;
+    background: #418745;
     color: #fff;
     padding: 0 20px;
 }
+.btn{
+    color: #17a01e;
+}
 
+.btn:hover{
+    color:red
+}
 .logo {
     font-size: 24px;
     font-weight: bold;
+    transition: 0.5s all;
 }
-
+.logo:hover{
+    scale: 1.2;
+}
 .nav-links {
     display: flex;
     list-style: none;
@@ -58,7 +82,7 @@ nav {
         flex-direction: column;
         width: 100%;
         position: absolute;
-        top: 60px;
+        top: 100px;
         left: 0;
         background: #333;
     }

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dark Mode / Light Mode Website</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="container">
+          <h1
+            style="
+              background-color: white;
+              color: black;
+              width: 300px;
+              text-align: center;
+            "
+          >
+            My Fav Anime
+          </h1>
+          <div class="theme-toggle">
+            <label class="switch">
+              <input type="checkbox" id="themeToggle" />
+              <span class="slider round"></span>
+            </label>
+            <span
+              style="background-color: white; color: black"
+              class="theme-text"
+              >Dark Mode</span
+            >
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="carousel">
+        <div class="carousel-container">
+          <div class="carousel-slide">
+            <img
+              style="width: auto; height: 400px"
+              src="./assets/gojo.jpg"
+              alt="gojo"
+            />
+          </div>
+          <div class="carousel-slide">
+            <img
+              style="width: auto; height: 400px"
+              src="./assets/naruto.jpg"
+              alt="naruto"
+            />
+          </div>
+          <div class="carousel-slide">
+            <img
+              style="width: auto; height: 400px"
+              src="./assets/nezha.jpg"
+              alt="nezha"
+            />
+          </div>
+          <div class="carousel-slide">
+            <img
+              style="width: auto; height: 400px"
+              src="./assets/pikachu.jpg"
+              alt="pikachu"
+            />
+          </div>
+          <div class="carousel-slide">
+            <img
+              style="width: auto; height: 400px"
+              src="./assets/sololeveling.jpg"
+              alt="solo leveling"
+            />
+          </div>
+        </div>
+        <button class="carousel-control prev"><</button>
+        <button class="carousel-control next">></button>
+      </section>
+
+      <section class="cards">
+        <div class="container">
+          <h2>Anime Cards Section</h2>
+          <div class="card-deck">
+            <div class="card">
+              <div style="width: 300px; height: 200px">
+                <img
+                  src="./assets/gojo.jpg"
+                  class="card-img-top"
+                  alt="Card Image"
+                  style="width: 300px; height: 200px; object-fit: cover"
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Satoru Gojo</h5>
+                <p class="card-text">
+                  Satoru Gojo is one of the main protagonists of the
+                  <span style="font-weight: bold; color: red"
+                    >Jujutsu Kaisen</span
+                  >
+                  series. He is a special grade jujutsu sorcerer and widely
+                  recognized as the strongest in the world.
+                </p>
+                <a
+                  href="https://jujutsu-kaisen.fandom.com/wiki/Satoru_Gojo"
+                  class="btn btn-primary"
+                  ><i>Go to fan web</i></a
+                >
+              </div>
+            </div>
+            <div class="card">
+              <div style="width: 300px; height: 200px">
+                <img
+                  src="./assets/naruto.jpg"
+                  class="card-img-top"
+                  alt="Card Image"
+                  style="
+                    width: 300px;
+                    height: 200px;
+                    object-fit: cover;
+                    object-position: top;
+                  "
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Naruto Uzumaki</h5>
+                <p class="card-text">
+                  Naruto Uzumaki is one of the main protagonists of the
+                  <span style="font-weight: bold; color: red">Naruto</span>
+                  series. Naruto Uzumaki is a shinobi of Konohagakure's Uzumaki
+                  clan. He became the jinchūriki of the Nine-Tails on the day of
+                  his birth — a fate that caused him to be shunned by most of
+                  Konoha throughout his childhood.
+                </p>
+                <a
+                  href="https://naruto.fandom.com/wiki/Naruto_Uzumaki"
+                  class="btn btn-primary"
+                  ><i>Go to fan web</i></a
+                >
+              </div>
+            </div>
+            <div class="card">
+              <div style="width: 300px; height: 200px">
+                <img
+                  src="./assets/nezha.jpg"
+                  class="card-img-top"
+                  alt="Card Image"
+                  style="
+                    width: 300px;
+                    height: 200px;
+                    object-fit: cover;
+                    object-position: top;
+                  "
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Nezha</h5>
+                <p class="card-text">
+                  Nezha is one of the main protagonists of the
+                  <span style="font-weight: bold; color: red">Nezha</span>
+                  series. Nezha is a precocious teenage deity who serves as a
+                  patron saint of young adults. After gestating in his mother’s
+                  womb for three years and six months, Nezha was born with
+                  superhuman strength and the ability to speak.
+                </p>
+                <a
+                  href="https://gods-and-demons.fandom.com/wiki/Nezha"
+                  class="btn btn-primary"
+                  ><i>Go to fan web</i></a
+                >
+              </div>
+            </div>
+            <div class="card">
+              <div style="width: 300px; height: 200px">
+                <img
+                  src="./assets/pikachu.jpg"
+                  class="card-img-top"
+                  alt="Card Image"
+                  style="width: 300px; height: 200px; object-fit: cover"
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Pikachu</h5>
+                <p class="card-text">
+                  Pikachu is one of the main protagonists / mascot of the
+                  <span style="font-weight: bold; color: red">Pokemon</span>
+                  series. Pikachu is an Electric-type Pokémon. It evolves from
+                  Pichu when leveled up with high friendship and evolves into
+                  Raichu when exposed to a Thunderstone.
+                </p>
+                <a
+                  href="https://pokemonaventurine.fandom.com/wiki/Pikachu_(Pok%C3%A9mon)"
+                  class="btn btn-primary"
+                  ><i>Go to fan web</i></a
+                >
+              </div>
+            </div>
+            <div class="card">
+              <div style="width: 300px; height: 200px">
+                <img
+                  src="./assets/sololeveling.jpg"
+                  class="card-img-top"
+                  alt="Card Image"
+                  style="
+                    width: 300px;
+                    height: 200px;
+                    object-fit: cover;
+                    object-position: top;
+                  "
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Sung Jinwoo</h5>
+                <p class="card-text">
+                  Sung Jinwoo is one of the main protagonists of the
+                  <span style="font-weight: bold; color: red"
+                    >Solo Leveling</span
+                  >
+                  series. He is the strongest hunter in the world and the second
+                  Shadow Monarch, having inherited the position from his
+                  predecessor Ashborn.
+                </p>
+                <a
+                  href="https://solo-leveling.fandom.com/wiki/Sung_Jinwoo"
+                  class="btn btn-primary"
+                  ><i>Go to fan web</i></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>
+          &copy; All copyright may/may not belong to me. If you want the code go
+          make your own.
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
