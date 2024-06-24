@@ -31,6 +31,11 @@ body {
 .navbar h1 {
     margin: 0;
     font-size: 36px;
+    background-color: white;
+    color: black;
+    width: 250px;
+    text-align: center;
+    border-radius: 8px;
 }
 
 .theme-toggle {
@@ -156,4 +161,19 @@ body.dark-mode .btn-primary {
 body.dark-mode .btn-primary:hover {
     background-color: white;
     color: #0056b3;
+}
+.image img {
+    animation-name: rotato;
+    animation-timing-function: linear;
+    animation-duration: 2s; /* Adjust the duration as needed */
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotato {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }

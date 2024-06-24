@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screen Crack Effect on Hover Button</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: black;
+            overflow: hidden;
+        }
+
+        .button-container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .crack-button {
+            padding: 15px 30px;
+            font-size: 18px;
+            color: white;
+            background-color: #61dafb;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            transition: background-color 0.5s, transform 0.5s;
+            z-index: 3;
+        }
+
+        .crack-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('crk.jpg') no-repeat center center;
+            background-size: cover;
+            opacity: 0;
+            transition: opacity 0.5s;
+            z-index: 1;
+            pointer-events: none;
+            animation: crack-animation 0.8s forwards; /* Animation for crack effect */
+        }
+
+        @keyframes crack-animation {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.1);
+            }
+        }
+
+        .crack-sound {
+            display: none; /* Hide audio element by default */
+        }
+
+        .button-container:hover .crack-button {
+            background-color: #ff6347; /* Change to a different color on hover */
+            transform: scale(1.1); /* Slightly enlarge the button on hover */
+        }
+
+        .button-container:hover ~ .crack-overlay {
+            opacity: 1;
+        }
+
+        .button-container:hover .crack-sound {
+            display: block; /* Show audio element on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <button class="crack-button">Hover Me</button>
+    </div>
+    <div class="crack-overlay"></div>
+
+    <!-- Sound effect -->
+    <audio class="crack-sound" controls>
+        <source src="glass-hit-192119.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        // Optional: Autoplay audio when hovering over the button
+        document.querySelector('.button-container').addEventListener('mouseenter', function() {
+            var audio = document.querySelector('.crack-sound');
+            if (audio) {
+                audio.play().catch(function(error) {
+                    console.error('Error playing audio: ', error);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

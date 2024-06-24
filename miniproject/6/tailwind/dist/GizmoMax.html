@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GizmoHub</title>
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+        @media (min-width: 1024px) {
+            .mobile-menu {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="w-full h-screen bg-white">
+        <header class="absolute inset-x-0 top-0 border-b border-black bg-white">
+            <nav class="flex items-center justify-between p-6 lg:px-8">
+                <img class="h-10 w-10 m-0" src="laptop.jpg" alt="Logo">
+                <div class="hidden lg:flex lg:items-center lg:gap-x-12">
+                    <ul class="flex list-none m-0 p-0 gap-x-12">
+                        <li class="font-serif text-lg font-medium leading-6"><a href="#">Home</a></li>
+                        <li class="font-serif text-lg font-medium leading-6"><a href="products">Product</a></li>
+                        <li class="font-serif text-lg font-medium leading-6"><a href="#">Reviews</a></li>
+                        <li class="font-serif text-lg font-medium leading-6"><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="lg:justify-end">
+                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Log in <span
+                            aria-hidden="true">&rarr;</span></a>
+                </div>
+                <div class="lg:hidden">
+                    <button id="mobile-menu-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#00040a">
+                            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+            <div id="mobile-menu"
+                class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 hidden mobile-menu">
+                <div class="flex items-center justify-between">
+                    <a href="#" class="-m-1.5 p-1.5">
+                        <img class="h-8 w-auto" src="laptop.jpg" alt="">
+                    </a>
+                    <button type="button" id="close-mobile-menu-button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+                        <span class="sr-only">Close menu</span>
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                            aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="mt-6 flow-root">
+                    <div class="-my-6 divide-y divide-gray-500/10">
+                        <div class="space-y-2 py-6">
+                            <a href="#"
+                                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Home</a>
+                            <a href="#"
+                                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Product</a>
+                            <a href="#"
+                                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Reviews</a>
+                            <a href="#"
+                                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Contact</a>
+                        </div>
+                        <div class="py-6">
+                            <a href="#"
+                                class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log
+                                in</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="hero bg-cover bg-center bg-no-repeat h-[calc(100vh-96px)] flex items-center justify-center text-center mt-20"
+            style="background-image: url('tech.webp');">
+            <div class="text-white">
+                <h1 class="text-5xl font-bold mb-4">Maximize your Tech Potential</h1>
+                <button onclick="scrollToProductDetails()"
+                    class="bg-blue-500 text-white mt-7 px-6 py-3 rounded-full text-lg">Call-to-action</button>
+            </div>
+        </div>
+
+        <div id="product-details" class="container mx-auto flex items-center justify-center py-12 bg-white">
+            <!-- Left side: Product details -->
+            <div class="w-full md:w-1/2 lg:flex lg:items-center lg:justify-start lg:mr-12">
+                <div class="p-6">
+                    <h2 class="text-center md:text-center mt-10 text-3xl font-bold text-gray-800">Product Details</h2>
+                    <div class="mt-8 flex items-center">
+
+                        <form class="md:ml-6 mt-4 md:mt-0">
+                            <h1 class="font-semibold text-3xl text-gray-900">GizmoMax</h1>
+                            <p class="mt-2 text-sm text-gray-700">GizmoMax is the ultimate tech companion designed to
+                                enhance your daily productivity and entertainment experience. Featuring cutting-edge
+                                technology and sleek design, it seamlessly integrates into your lifestyle, whether
+                                you’re at home, work, or on the go.</p>
+                            <h3 class="mt-4 text-lg font-semibold text-gray-900">Features:</h3>
+                            <ul class="mt-2 text-gray-700">
+                                <li>Advanced Performance: Powered by the latest processors and high-speed RAM.</li>
+                                <li>Sleek Design: Edge-to-edge display, perfect for streaming, gaming, and creative
+                                    work.</li>
+                                <li>Long-lasting Battery: Extended battery life, ensuring you never miss a beat.</li>
+                                <li>Enhanced Connectivity: Built-in Wi-Fi 6, Bluetooth 5.0, and optional 5G
+                                    capabilities.</li>
+                                <li>Sleek Design: Crafted with premium materials and a slim profile, GizmoMax exudes
+                                    elegance and durability.</li>
+                            </ul>
+                            <div class="mt-4 text-xl font-semibold text-gray-900 flex">Price: $1 Million 
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                    width="24px" fill="#000000">
+                                    <path
+                                        d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Zm134 280h280-280Z" />
+                                </svg>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hidden lg:block lg:w-1/2">
+                <img src="laptop.jpg" alt="GizmoMax Product" class="w-full h-auto object-cover rounded-lg shadow-lg">
+            </div>
+        </div>
+        <div class="container mx-auto py-12 max-w-7xl ">
+            <h2 class="text-center text-3xl font-bold text-yellow-600 mb-8">Customer Reviews</h2>
+            <div class="bg-blue-950 shadow-md rounded-lg p-6 mb-4 flex ">
+                <img class="border rounded-full h-24 mr-10" src="" alt="">
+                <p class="text-green-700 ml-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur fugit
+                    dolore in, impedit vitae eos dolores vel nisi debitis iure ipsam velit suscipit veniam itaque sint
+                    corrupti eum obcaecati odio.</p>
+                <span class="mt-15 ml-0 text-white">- Jane Doe</span>
+            </div>
+            <div class="bg-blue-950 shadow-md rounded-lg p-6 mb-4 flex">
+                <img class="border rounded-full h-24 mr-10" src="" alt="">
+                <p class="text-green-700 ml-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur fugit
+                    dolore in, impedit vitae eos dolores vel nisi debitis iure ipsam velit suscipit veniam itaque sint
+                    corrupti eum obcaecati odio.</p>
+                <p class="mt-4 text-white">- John Smith</p>
+            </div>
+            <div class="bg-blue-950 shadow-md rounded-lg p-6 mb-4 flex">
+                <img class="border rounded-full h-24 mr-10" src="" alt="">
+                <p class="text-green-700 ml-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur fugit
+                    dolore in, impedit vitae eos dolores vel nisi debitis iure ipsam velit suscipit veniam itaque sint
+                    corrupti eum obcaecati odio.</p>
+                <p class="mt-4 text-left text-white">- Chandler Geller</p>
+            </div>
+            <div class="bg-blue-950 shadow-md rounded-lg p-6 mb-4 flex">
+                <img class="border rounded-full h-24 mr-10" src="" alt="">
+                <p class="text-green-700 ml-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur fugit
+                    dolore in, impedit vitae eos dolores vel nisi debitis iure ipsam velit suscipit veniam itaque sint
+                    corrupti eum obcaecati odio.</p>
+                <p class="mt-4 text-white">- Mark Bing</p>
+            </div>
+        </div>
+
+
+
+        <section id="contact" class="py-16 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold mb-12">Contact Us</h2>
+                <form class="max-w-lg mx-auto" id="registerForm">
+                    <div id="form-group" class="mb-4">
+                        <input type="text" name="name" id="name" placeholder="Your Name"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+                            required />
+                    </div>
+                    <div id="form-group" class="mb-4">
+                        <input type="email" name="email" id="email" placeholder="Your Email"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+                            required />
+                    </div>
+                    <div id="form-group" class="mb-4">
+                        <textarea name="message" rows="5" placeholder="Your Message"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"></textarea>
+                    </div>
+                    <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </section>
+        </main>
+        <footer class="bg-black text-white py-8">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-wrap justify-between">
+                    <div class="w-full md:w-1/3 mb-6 md:mb-0">
+                        <h4 class="text-xl font-bold mb-4">GizmoHub</h4>
+                        <p>Maximize your Tech Potential</p>
+                    </div>
+                    <div class="w-full md:w-1/3 mb-6 md:mb-0">
+                        <h4 class="text-xl font-bold mb-4">Contact Us</h4>
+                        <ul>
+                            <li class="mb-2"><a href="mailto:gizmohubsupport@gmail.com"
+                                    class="hover:underline">support@gizmohub.com</a></li>
+                            <li class="mb-2">Patan, Lalitpur, Nepal</li>
+                            <li class="mb-2">01-55235698</li>
+                        </ul>
+                    </div>
+                    <div class="w-full md:w-1/3 mb-6 md:mb-0">
+                        <h4 class="text-xl font-bold mb-4">Follow Us</h4>
+                        <ul class="flex space-x-4">
+                            <li><a href="facebook.com" class="hover:underline">Facebook</a></li>
+                            <li><a href="instagram.com" class="hover:underline">Instagram</a></li>
+                            <li><a href="linkedin.com" class="hover:underline">Linkedin</a></li>
+                            <li><a href="twitter.com" class="hover:underline">Twitter</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="text-center mt-6 border-t border-gray-700 pt-6">
+                    <p>&copy; 2024 GizmoHub. All rights reserved. <a href="#" class="hover:underline">Privacy Policy</a>
+                        | <a href="#" class="hover:underline">Terms of Service</a></p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        document.getElementById('close-mobile-menu-button').addEventListener('click', function () {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        function scrollToProductDetails() {
+            document.getElementById('product-details').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        const form = document.getElementById("registerForm");
+        const username = document.getElementById("name");
+        const email = document.getElementById("email");
+
+        form.addEventListener("submit", (event) => {
+            event.preventDefault();
+            if (validateForm()) {
+                alert(
+                    `Thank you for contacting us!\n\nnName: ${ name.value } \nEmail: ${ email.value }`
+     );
+    }
+    });
+
+        function validateForm() {
+            let isValid = true;
+
+            if (name.value.trim() === "") {
+                setError(name, "Your fullname is required");
+                isValid = false;
+            } else {
+                clearError(name);
+            }
+        }
+
+        if (email.value.trim() === "") {
+            setError(email, "Email is required");
+            isValid = false;
+        } else if (!validateEmail(email.value)) {
+            setError(email, "Enter a valid email");
+            isValid = false;
+        } else {
+            clearError(email);
+        }
+        function setError(input, message) {
+            const formGroup = input.closest("#form-group");
+            const errorDisplay = formGroup.querySelector(".error-message");
+            if (errorDisplay) {
+                errorDisplay.textContent = message;
+                errorDisplay.style.display = "block";
+            }
+        }
+
+        function clearError(input) {
+            const formGroup = input.closest("#form-group");
+            const errorDisplay = formGroup.querySelector(".error-message");
+            if (errorDisplay) {
+                errorDisplay.textContent = "";
+                errorDisplay.style.display = "none";
+            }
+        }
+
+        function validateEmail(email) {
+            const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            return re.test(String(email).toLowerCase());
+        }
+    </script>
+</body>
+
+</html>

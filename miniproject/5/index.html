@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dark Mode / Light Mode Website</title>
+    <title>My Fav Anime</title>
+    <link rel="icon" href="./assets/sharingan.png" type="image/png" />
     <link rel="stylesheet" href="styles.css" />
     <script
       src="https://kit.fontawesome.com/a076d05399.js"
@@ -14,23 +15,28 @@
     <header>
       <nav class="navbar">
         <div class="container">
-          <h1
-            style="
-              background-color: white;
-              color: black;
-              width: 300px;
-              text-align: center;
-            "
-          >
-            My Fav Anime
-          </h1>
+          <div class="image" style="display: flex; align-items: center">
+            <img
+              src="./assets/sharingan.png"
+              alt="sharingan"
+              height="50px"
+              width="50px"
+            />
+            <h1>My Fav Anime</h1>
+          </div>
+
           <div class="theme-toggle">
             <label class="switch">
               <input type="checkbox" id="themeToggle" />
               <span class="slider round"></span>
             </label>
             <span
-              style="background-color: white; color: black"
+              style="
+                background-color: white;
+                color: black;
+                font-size: 20px;
+                border-radius: 8px;
+              "
               class="theme-text"
               >Dark Mode</span
             >
@@ -41,6 +47,7 @@
 
     <main>
       <section class="carousel">
+        <h2>Anime Carousel Slider</h2>
         <div class="carousel-container">
           <div class="carousel-slide">
             <img
@@ -78,8 +85,8 @@
             />
           </div>
         </div>
-        <button class="carousel-control prev"><</button>
-        <button class="carousel-control next">></button>
+        <button class="carousel-control prev"><=</button>
+        <button class="carousel-control next">=></button>
       </section>
 
       <section class="cards">
