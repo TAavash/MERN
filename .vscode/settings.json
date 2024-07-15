@@ -1,3 +1,4 @@
 {
-  "livePreview.defaultPreviewPath": "/miniproject/2/index.html"
+  "livePreview.defaultPreviewPath": "/miniproject/2/index.html",
+  "git.ignoreLimitWarning": true
 }
