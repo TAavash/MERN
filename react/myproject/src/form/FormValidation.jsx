@@ -20,7 +20,7 @@ const FormValidation = () => {
     setErrors(tempErrors);
     return Object.keys(tempErrors).length === 0;
   };
-  
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validate()) {

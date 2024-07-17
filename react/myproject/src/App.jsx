@@ -5,15 +5,17 @@
 // import Register from "./form/ContactPage";
 // import Navbarr from "./components/Navbarr";
 // import Product from "./pages/Product";
-import FormValidation from "./form/FormValidation";
+// import ContactUs from "./form/ContactUs";
+import Main from "./event/Main";
 
 const App = () => {
   return (
-    <div className="flex flex-col min-h-screen min-w-screen bg-red-300 items-center justify-center">
+    <div className="flex flex-col min-h-screen min-w-screen bg-[#183866] items-center justify-center">
       {/* <Navbarr/> */}
       {/* <Home/> */}
       {/* <Log /> */}
-      <FormValidation />
+      {/* <ContactUs /> */}
+      <Main/>
       {/* <Route/> */}
       {/* <Product/> */}
       {/* <AllComp/> */}
