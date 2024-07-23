@@ -5,7 +5,7 @@ import Step3 from './components/Step3';
 import Step4 from './components/Step4';
 import ProgressBar from './components/ProgressBar';
 
-function M() {
+function Main() {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
     firstName: '',
@@ -63,4 +63,4 @@ function M() {
   }
 }
 
-export default M;
+export default Main;

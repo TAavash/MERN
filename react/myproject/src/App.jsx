@@ -1,6 +1,6 @@
 // import Home from "./pages/Home";
 // import AllComp from "./pages/AllComp";
-// import Login from "./pages/Login";
+import Login from "./pages/Login";
 // import Log from "./form/LoginPage";
 // import Register from "./form/ContactPage";
 // import Navbarr from "./components/Navbarr";
@@ -13,9 +13,9 @@ const App = () => {
     <div className="flex flex-col min-h-screen min-w-screen bg-[#183866] items-center justify-center">
       {/* <Navbarr/> */}
       {/* <Home/> */}
-      {/* <Log /> */}
+      <Login />
       {/* <ContactUs /> */}
-      <Main/>
+      {/* <Main/> */}
       {/* <Route/> */}
       {/* <Product/> */}
       {/* <AllComp/> */}
